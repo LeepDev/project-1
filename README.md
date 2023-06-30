@@ -32,13 +32,13 @@ Working with:
     - HTML boilerplate
     - starter js file
     - starter css file
-- [-] Render a pitch selection mode
+- [ ] Render a pitch selection mode
     - includes a selection of pitches
         - fastball
         - curve
         - eephus
     - includes a tic-tac-toe like pitch location selector
-- [-] Render a astros' batter mode
+- [ ] Render a astros' batter mode
     - includes a random hint button
         - audio clue of banging noises and pauses
     - includes a selection of batting speeds
@@ -46,9 +46,9 @@ Working with:
         - medium
         - fast
     - includes a tic-tac-toe like batting location selector
-- [-] Render Play ball button
+- [ ] Render Play ball button
     - runs logic and display results (see below)
-- [-] Render a pitch count
+- [ ] Render a pitch count
     - i.e.: PITCH 2
     - pitch count includes
         - Max of 3 pitches
@@ -56,29 +56,29 @@ Working with:
             - batter loses
         - else
             - batter wins
-- [-] Render a batting session message
+- [ ] Render a batting session message
     - "Strike" when batter does not hit the ball
     - "HIT!!!" when batter does hit the ball
     - "YOU GOT TOSSED!" when batter exceeds suspicion meter
-- [-] Render a suspicion meter
+- [ ] Render a suspicion meter
     - if suspicion meter reaches the max, the Astro gets thrown from the game
     - Max of 5 hints total
     - Max of 2 hints per batting session
     - New at bat lowers suspicion meter to 0
-- [-] Render Astros batters Hit/Strikeout count
+- [ ] Render Astros batters Hit/Strikeout count
 
 ## Stretch Goals
-- [-] Make the Maxes variable/random
+- [ ] Make the Maxes variable/random
     - Maxes:
         - pitch count
         - hints
         - suspicion meter
-- [-] Make an option for number of innnings
+- [ ] Make an option for number of innnings
     - 3 at bats per inning
-- [-] Make a score board
+- [ ] Make a score board
     - Astros vs Angels
         - show both Hit/Strikeout counts
-- [-] Switch Sides
+- [ ] Switch Sides
     - Astros pitch
     - Angles bat (with no hints of course)
 
