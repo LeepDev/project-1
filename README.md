@@ -28,7 +28,7 @@ Working with:
 - TBD
 
 ## MVP Goals
-- [-] Create a browser game setup
+- [ ] Create a browser game setup
     - HTML boilerplate
     - starter js file
     - starter css file
