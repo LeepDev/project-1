@@ -28,7 +28,7 @@ Working with:
 - TBD
 
 ## MVP Goals
-- [ ] Create a browser game setup
+- [X] Create a browser game setup
     - HTML boilerplate
     - starter js file
     - starter css file
@@ -83,7 +83,6 @@ Working with:
     - Angles bat (with no hints of course)
 
 ## Potential Roadblocks
-- Time
 - Lack of knowledge of tech stack
 - Game Funkiness/wonky logic
 - CSS is fun...
