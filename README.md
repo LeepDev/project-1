@@ -25,7 +25,13 @@ Working with:
 - CSS
 
 ## Wireframes
-- TBD
+![alt text](https://drive.google.com/uc?export=view&id=1OxWHNFeMNl161FzczME-c7YL8TQHiSfN)
+
+![alt text](https://drive.google.com/uc?export=view&id=1WFvXNWHznK7thq67muDBm8p_FJtIjfjU)
+
+![alt text](https://drive.google.com/uc?export=view&id=1srM7AZ7XiPPxUq-q4wnqlRhjTyhRrmsp)
+
+![alt text](https://drive.google.com/uc?export=view&id=1AioqRV24DC-nl0hK0nsWV-2f3P6fVjA8)
 
 ## MVP Goals
 - [X] Create a browser game setup
@@ -57,7 +63,7 @@ Working with:
         - else
             - batter wins
 - [ ] Render a batting session message
-    - "Strike" when batter does not hit the ball
+    - "Strike!" when batter does not hit the ball
     - "HIT!!!" when batter does hit the ball
     - "YOU GOT TOSSED!" when batter exceeds suspicion meter
 - [ ] Render a suspicion meter
