@@ -21,7 +21,7 @@ TLDR: Bat like an Astro, and you'll be sure to be inside the mind of the opposin
 ## Tech Stacks
 Working with:
 - HTML
-- JS
+- JS/JQuery
 - CSS
 
 ## Wireframes
@@ -38,7 +38,12 @@ Working with:
     - HTML boilerplate
     - starter js file
     - starter css file
-- [ ] Render a pitch selection mode
+- [X] Mock out Wireframes
+    - Astros' Banging Baseball
+    - Pitcher's Dilema
+    - Astros' "All Star" Mode
+    - Batter's Box
+- [X] Render a pitch selection mode
     - includes a selection of pitches
         - fastball
         - curve
@@ -72,6 +77,7 @@ Working with:
     - Max of 2 hints per batting session
     - New at bat lowers suspicion meter to 0
 - [ ] Render Astros batters Hit/Strikeout count
+- [ ] Style Wireframes with CSS
 
 ## Stretch Goals
 - [ ] Make the Maxes variable/random
@@ -87,8 +93,17 @@ Working with:
 - [ ] Switch Sides
     - Astros pitch
     - Angles bat (with no hints of course)
+- [ ] Animation/State Changes
+    - Animate face of batter
+    - Animate results
+        -strike
+        -ball
+        -hit
+        -thrown out
+    - Animate ball flight
 
 ## Potential Roadblocks
 - Lack of knowledge of tech stack
 - Game Funkiness/wonky logic
+
 - CSS is fun...

@@ -1,0 +1,103 @@
+* {
+    /* height & width now includes border & padding */
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background-color: navy;
+    color: white;
+  }
+
+  #startPage,#pitcherPage,#batterPage,#battersBoxPage {    
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #startHeader,#pitcherHeader,#batterHeader,#battersBoxHeader {
+    border-bottom:  .25vh solid orange;
+  }
+
+  #startBody {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 30vh;
+  }
+
+  #pitcherBody,#batterBody {
+    display: flex;
+    align-items: center;
+  }
+
+  #pitcherSpace,#batterSpace {
+    width: 20vh;
+  }
+
+  #pitcherBtns,#batterBtns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #pitcherBtns button,#batterBtns button {
+    opacity: 50%;
+    margin: 1vh;
+    &:hover{
+        opacity: 100%;
+        cursor: pointer;
+    }
+  }
+
+  #pitcherTTT,#batterTTT {
+    background-color: orange;
+    display: grid;
+    grid-template-columns: repeat(3, 10vmin);
+    grid-template-rows: repeat(3, 10vmin);
+  }
+
+  #pitcherTTT div,#batterTTT div {
+    border: .1vmin solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vmin;
+    &:hover {
+        background-color: cadetblue;
+        cursor: pointer;
+    }
+  }
+
+  #pitcherMsg,#batterMsg {
+    color: red;
+  }
+
+  #startBtn,#pitcherBtn,#batterBtn,#playAgainBoxBtn,#quitBoxBtn {
+    width: auto;
+    opacity: 50%;
+    text-align: center;
+    &:hover {
+        opacity: 100%;
+        cursor: pointer;
+        -webkit-animation: notexistent;
+        animation: notexistent;
+    }
+  }
+
+  @keyframes startBtnGlowing {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+  }
+
+  #startBtn {
+    animation: startBtnGlowing 2000ms infinite;
+    animation-direction: alternate-reverse;
+  }
