@@ -56,12 +56,12 @@ Working with:
         - medium
         - fast
     - includes a tic-tac-toe like batting location selector
-- [ ] Auto Render logic and display results (see below) on the Batter's Box Page
-- [ ] Render a batting session message
+- [X] Auto Render logic and display results (see below) on the Batter's Box Page
+- [X] Render a batting session message
     - "Strike!" when batter does not hit the ball
     - add button to go back to pitching page unless batting session is done (pitch count is 3 max)
     - add button to quit
-- [ ] Render a pitch count
+- [X] Render a pitch count
     - i.e.: PITCH 2
     - pitch count includes
         - Max of 3 pitches
@@ -69,13 +69,13 @@ Working with:
             - batter loses
         - else
             - batter wins
-- [ ] Render a suspicion meter
+- [X] Render a suspicion meter
     - if suspicion meter reaches the max, the Astro gets thrown from the game
     - Max of 7 suspicions for each game
     - Max of 5 hints total for each at bat
     - Max of 2 hints per batting session
     - New at bat lowers suspicion meter to 0
-- [ ] Render Astros batters Hit/Strikeout count
+- [X] Render Astros batters Hit/Strikeout count
 - [ ] Style Wireframes with CSS
 - [ ] Add info popup boxes for information on how to play the game
 - [ ] Render pages
@@ -106,6 +106,7 @@ Working with:
         -hit
         -thrown out
     - Animate ball flight
+    - Animate suspicion meter/face
 
 ## Potential Roadblocks
 - Lack of knowledge of tech stack

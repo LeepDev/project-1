@@ -87,6 +87,24 @@
     }
   }
 
+  #hintMsg {
+    color: orangered;
+  }
+
+  #resultsDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #scoreDiv {
+    margin-left: 10%;
+  }
+
+  #countDiv {
+    margin-right: 10%;
+  }
+
   #startBtn,#pitcherBtn,#batterBtn,#playAgainBoxBtn,#quitBoxBtn {
     width: auto;
     opacity: 50%;
@@ -109,6 +127,9 @@
   }
 
   #startBtn {
-    animation: startBtnGlowing 2000ms infinite;
+    background-color: white;
+    border: .25vh solid orange;
+    border-radius: 4vh;
+    animation: startBtnGlowing 1700ms infinite;
     animation-direction: alternate-reverse;
   }
