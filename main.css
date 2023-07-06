@@ -76,6 +76,17 @@
     color: red;
   }
 
+  #hintMsg {
+    color: green;
+  }
+
+  #hint {
+    width: 10vh;
+    &:hover {
+        opacity: 50%;
+    }
+  }
+
   #startBtn,#pitcherBtn,#batterBtn,#playAgainBoxBtn,#quitBoxBtn {
     width: auto;
     opacity: 50%;

@@ -49,16 +49,18 @@ Working with:
         - curve
         - eephus
     - includes a tic-tac-toe like pitch location selector
-- [ ] Render a astros' batter mode
-    - includes a random hint button
-        - audio clue of banging noises and pauses
+- [X] Render a astros' batter mode
+    - includes a random hint button (text for now)
     - includes a selection of batting speeds
         - slow
         - medium
         - fast
     - includes a tic-tac-toe like batting location selector
-- [ ] Render Play ball button
-    - runs logic and display results (see below)
+- [ ] Auto Render logic and display results (see below) on the Batter's Box Page
+- [ ] Render a batting session message
+    - "Strike!" when batter does not hit the ball
+    - add button to go back to pitching page unless batting session is done (pitch count is 3 max)
+    - add button to quit
 - [ ] Render a pitch count
     - i.e.: PITCH 2
     - pitch count includes
@@ -67,17 +69,21 @@ Working with:
             - batter loses
         - else
             - batter wins
-- [ ] Render a batting session message
-    - "Strike!" when batter does not hit the ball
-    - "HIT!!!" when batter does hit the ball
-    - "YOU GOT TOSSED!" when batter exceeds suspicion meter
 - [ ] Render a suspicion meter
     - if suspicion meter reaches the max, the Astro gets thrown from the game
-    - Max of 5 hints total
+    - Max of 7 suspicions for each game
+    - Max of 5 hints total for each at bat
     - Max of 2 hints per batting session
     - New at bat lowers suspicion meter to 0
 - [ ] Render Astros batters Hit/Strikeout count
 - [ ] Style Wireframes with CSS
+- [ ] Add info popup boxes for information on how to play the game
+- [ ] Render pages
+    - thrown out page
+    - hit page
+    - try again page
+- [ ] audio clue of banging noises and pauses
+
 
 ## Stretch Goals
 - [ ] Make the Maxes variable/random
@@ -86,7 +92,6 @@ Working with:
         - hints
         - suspicion meter
 - [ ] Make an option for number of innnings
-    - 3 at bats per inning
 - [ ] Make a score board
     - Astros vs Angels
         - show both Hit/Strikeout counts
