@@ -5,19 +5,32 @@ const hintsBatMax = 5;
 const hintsSwingMax = 2;
 const pitchMax = 3;
 
-const pitchLegend = `Pitch types -- "BANG [ Pause ]" followed by:<br/>
-<br/>
-fastball (fast) -- "BANG"<br/>
-curve (medium) -- "BANG BANG"<br/>
-eephus (slow) -- "BANG BANG BANG"<br/>
-<br/>
-Ball location row -- "BANG BANG [ Pause ]" followed by:<br/>
-<br/>
-array row 0, 1 or 2 -- "BANG * (row+1)"<br/>
-<br/>
-Ball location column -- "BANG BANG BANG" followed by:<br/>
-<br/>
-array col 0, 1, or 2 -- "BANG * (col+1)"<br/>`
+const pitchLegend = `
+<span>
+    <ul>
+        <li>Pitch types -- "BANG"<br/>[ Pause ]
+            <ul>
+                <li>fastball (fast) -- "BANG"</li>
+                <li>curve (medium) -- "BANG BANG"</li>
+                <li>eephus (slow) -- "BANG BANG BANG"</li>
+            </ul>
+        </li>
+        <li>Row -- "BANG BANG"<br/>[ Pause ]
+            <ul>
+                <li>Row 1 -- "BANG"</li>
+                <li>Row 2 -- "BANG BANG"</li>
+                <li>Row 3 -- "BANG BANG BANG"</li>
+            </ul>
+        </li>
+        <li>Col -- "BANG BANG BANG"<br/>[ Pause ]
+            <ul>
+                <li>Col 1 -- "BANG"</li>
+                <li>Col 2 -- "BANG BANG"</li>
+                <li>Col 3 -- "BANG BANG BANG"</li>
+            </ul>
+        </li>
+    </ul>
+</span>`
 const modalContent = `The 2017 Houston Astros were caught using a tool (banging a garbage can) and someone in the dugout watching the signs on the other team to give 'hints' to the batter (<a target="_blank" href="https://en.wikipedia.org/wiki/Houston_Astros_sign_stealing_scandal">Astros' Sign Stealing Scandal</a>).
 <br/><br/>
 We're here to give you a peek into the batter's box of an Astro.
@@ -32,6 +45,9 @@ const pitchBatterMatrix = {
     'Medium': 'Curve Ball',
     'Slow': 'Eephus'
 }
+
+const delay = 210;
+const bangSound = "https://cdn.videvo.net/videvo_files/audio/premium/audio0112/watermarked/HitTableFistBang%20PE1056705_preview.mp3"
 //#endregion
 
 //#region dom elements
@@ -182,12 +198,15 @@ function generateHint() {
                 switch ($pitcherSelected.html()) {
                     case 'Fastball':
                         msg += `Bang`;
+                        playBangs(1,1,true);
                         break;
                     case 'Curve Ball':
                         msg += `Bang Bang`;
+                        playBangs(1,2,true);
                         break;
                     case 'Eephus':
                         msg += `Bang Bang Bang`;
+                        playBangs(1,3,true);
                         break;
                 }
                 break;
@@ -196,12 +215,15 @@ function generateHint() {
                 switch ($pitcherRow.html()) {
                     case 'Top':
                         msg += `Bang`;
+                        playBangs(2,1,true);
                         break;
                     case 'Middle':
                         msg += `Bang Bang`;
+                        playBangs(2,2,true);
                         break;
                     case 'Bottom':
                         msg += `Bang Bang Bang`;
+                        playBangs(2,3,true);
                         break;
                 }
                 break;
@@ -210,12 +232,15 @@ function generateHint() {
                 switch ($pitcherCol.html()) {
                     case 'Left':
                         msg += `Bang`;
+                        playBangs(3,1,true);
                         break;
                     case 'Center':
                         msg += `Bang Bang`;
+                        playBangs(3,2,true);
                         break;
                     case 'Right':
                         msg += `Bang Bang Bang`;
+                        playBangs(3,3,true);
                         break;
                 }
                 break;
@@ -223,6 +248,32 @@ function generateHint() {
         hintsGiven.push(randHintInd);
         $hintMsg.html(msg)
     }
+}
+
+function playBangs(set1,set2,breakSet) {
+    if (set1 > 0)
+    {
+        playSound();
+        setTimeout( () => {
+            playBangs(--set1,set2,breakSet);
+        }, delay)
+    } else if (breakSet) {
+        setTimeout( () => {
+            playBangs(set1,set2,false);
+        }, delay)
+    } else if (set2 > 0) {
+        playSound();
+        setTimeout( () => {
+            playBangs(set1,--set2,breakSet);
+        }, delay)
+    }
+}
+
+function playSound() {
+    let player = new Audio();
+    player.volume = .5;
+    player.src = bangSound;
+    player.play();
 }
 
 //#region function calculateResult

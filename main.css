@@ -146,7 +146,14 @@
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 60%; /* Could be more or less, depending on screen size */
+    text-align: center;
+  }
+
+  .modal-content span {
+    display: inline-block;
+    text-align: left;
+    width: auto;
   }
 
 /* The Close Button */

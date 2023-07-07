@@ -76,17 +76,17 @@ Working with:
     - Max of 2 hints per batting session
     - New at bat lowers suspicion meter to 0
 - [X] Render Astros batters Hit/Strikeout count
-- [ ] Style Wireframes with CSS
-- [ ] Add info popup boxes for information on how to play the game
+- [X] Add info popup boxes for information on how to play the game
+- [X] audio clue of banging noises and pauses
 - [ ] Render pages
     - thrown out page
     - hit page
     - try again page
-- [ ] audio clue of banging noises and pauses
-- [ ] clean up code to represent DRY methodology
+- [ ] clean up code to represent DRY methodology/compare with previous projects
 
 
 ## Stretch Goals
+- [ ] Beautify with CSS
 - [ ] Make the Maxes variable/random
     - Maxes:
         - pitch count
