@@ -5,24 +5,33 @@ const hintsBatMax = 5;
 const hintsSwingMax = 2;
 const pitchMax = 3;
 
+const pitchLegend = `Pitch types -- "BANG [ Pause ]" followed by:<br/>
+<br/>
+fastball (fast) -- "BANG"<br/>
+curve (medium) -- "BANG BANG"<br/>
+eephus (slow) -- "BANG BANG BANG"<br/>
+<br/>
+Ball location row -- "BANG BANG [ Pause ]" followed by:<br/>
+<br/>
+array row 0, 1 or 2 -- "BANG * (row+1)"<br/>
+<br/>
+Ball location column -- "BANG BANG BANG" followed by:<br/>
+<br/>
+array col 0, 1, or 2 -- "BANG * (col+1)"<br/>`
+const modalContent = `The 2017 Houston Astros were caught using a tool (banging a garbage can) and someone in the dugout watching the signs on the other team to give 'hints' to the batter (<a target="_blank" href="https://en.wikipedia.org/wiki/Houston_Astros_sign_stealing_scandal">Astros' Sign Stealing Scandal</a>).
+<br/><br/>
+We're here to give you a peek into the batter's box of an Astro.
+<br/><br/>
+Batting for the Astros means you will get hints in the form of banging sounds:
+<br/><br/>
+${pitchLegend}
+<br/><br/>
+TLDR: Bat like an Astro, and you'll be sure to be inside the mind of the opposing pitcher. Unless you got bad ears...`
 const pitchBatterMatrix = {
     'Fast': 'Fastball',
     'Medium': 'Curve Ball',
     'Slow': 'Eephus'
 }
-//#endregion
-
-//#region default values
-let hintsGiven = [];
-let hintPerBat = 0;
-let hintPerSwing = 0;
-
-let susCounter = 0;
-let pitchCount = 0;
-
-let astrosHits = 0;
-let astrosStrikeouts = 0;
-let astrosThrownout = 0;
 //#endregion
 
 //#region dom elements
@@ -60,27 +69,56 @@ const $susCount = $('#susCount');
 const $battersBoxPage = $('#battersBoxPage');
 const $playAgainBoxBtn = $('#playAgainBoxBtn');
 const $quitBoxBtn = $('#quitBoxBtn');
+
+const $modal = $('#myModal');
+const $instructionsOpenBtn = $('#instructionsOpen');
+const $closeBtn = $('#close');
+const $modalContent = $('#modalContent');
+
+const $modal2 = $('#myModal2');
+const $hintOpenBtn = $('#hintOpen');
+const $close2Btn = $('#close2');
+const $modalContent2 = $('#modalContent2');
+//#endregion
+
+//#region default values
+let hintsGiven = [];
+let hintPerBat = 0;
+let hintPerSwing = 0;
+
+let susCounter = 0;
+let pitchCount = 0;
+
+let astrosHits = 0;
+let astrosStrikeouts = 0;
+let astrosThrownout = 0;
+
+$modalContent.html(modalContent);
+$modalContent2.html(pitchLegend);
 //#endregion
 
 //#region event listners
 $startBtn.click(function(){$startPage.fadeToggle(); $pitcherPage.fadeToggle();})
 
 $pitcherTypeBtns.click(function(evt) {$pitcherTypeBtns.css('opacity','50%');$pitcherSelected.html(evt.target.innerHTML);evt.target.style = `opacity: 100%`})
-$pitcherTTTDivs.click(function(evt) {$pitcherCol.html(evt.target.className);$pitcherRow.html(evt.target.id);$pitcherTTTDivs.css('backgroundImage','none');evt.target.style = `background-image: url("https://img.freepik.com/premium-photo/baseball-ball-white-background-isolated_702196-15.jpg");
-background-repeat: no-repeat;
-background-size: contain;`})
+$pitcherTTTDivs.click(function(evt) {$pitcherCol.html(evt.target.className);$pitcherRow.html(evt.target.id);$pitcherTTTDivs.css('backgroundImage','none');evt.target.style = `background-image: url("https://img.freepik.com/premium-photo/baseball-ball-white-background-isolated_702196-15.jpg");background-repeat: no-repeat;background-size: contain;`})
 $pitcherBtn.click(function(){if ($pitcherSelected.html() === '' || $pitcherCol.html() === '' || $pitcherRow.html() === '') {$pitcherMsg.html('Please click all categories')} else {pitchCount++;$pitcherPage.fadeToggle(); $batterPage.fadeToggle()}})
 
 $batterTypeBtns.click(function(evt) {$batterTypeBtns.css('opacity','50%');$batterSelected.html(evt.target.innerHTML);evt.target.style = `opacity: 100%`})
-$batterTTTDivs.click(function(evt) {$batterCol.html(evt.target.className);$batterRow.html(evt.target.id);$batterTTTDivs.css('backgroundImage','none');evt.target.style = `background-image: url("https://img.freepik.com/premium-photo/baseball-ball-white-background-isolated_702196-15.jpg");
-background-repeat: no-repeat;
-background-size: contain;`})
+$batterTTTDivs.click(function(evt) {$batterCol.html(evt.target.className);$batterRow.html(evt.target.id);$batterTTTDivs.css('backgroundImage','none');evt.target.style = `background-image: url("https://img.freepik.com/premium-photo/baseball-ball-white-background-isolated_702196-15.jpg");background-repeat: no-repeat;background-size: contain;`})
 $batterBtn.click(function(){if ($batterSelected.html() === '' || $batterCol.html() === '' || $batterRow.html() === '') {$batterMsg.html('Please click all categories')} else {$batterPage.fadeToggle(); $battersBoxPage.fadeToggle(); calculateResult()}})
 
 $hint.click(function() {getNextHint()})
 
 $playAgainBoxBtn.click(function(){$battersBoxPage.fadeToggle(); $pitcherPage.fadeToggle();nextSwingSettings()})
 $quitBoxBtn.click(function(){$battersBoxPage.fadeToggle(); $startPage.fadeToggle();defaultSettings()})
+
+$instructionsOpenBtn.click(function() {$modal.css('display','block');})
+$closeBtn.click(function() {$modal.css('display','none');})
+$(window).click(function(event) {if(event.target == $modal[0] || event.target == $modal2[0]) {$modal.css('display','none');}})
+
+$hintOpenBtn.click(function() {$modal2.css('display','block');})
+$close2Btn.click(function() {$modal2.css('display','none');})
 //#endregion
 
 //#region functions

@@ -83,6 +83,7 @@ Working with:
     - hit page
     - try again page
 - [ ] audio clue of banging noises and pauses
+- [ ] clean up code to represent DRY methodology
 
 
 ## Stretch Goals

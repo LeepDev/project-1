@@ -105,16 +105,65 @@
     margin-right: 10%;
   }
 
-  #startBtn,#pitcherBtn,#batterBtn,#playAgainBoxBtn,#quitBoxBtn {
+  #startBtn,#pitcherBtn,#batterBtn,#playAgainBoxBtn,#quitBoxBtn,#instructionsOpen, #hintOpen {
     width: auto;
-    opacity: 50%;
+    opacity: 60%;
     text-align: center;
+    margin: .25vh;
     &:hover {
         opacity: 100%;
         cursor: pointer;
         -webkit-animation: notexistent;
         animation: notexistent;
     }
+  }  
+
+  #startBtn {
+    background-color: white;
+    border: .25vh solid orange;
+    border-radius: 4vh;
+    animation: startBtnGlowing 1700ms infinite;
+    animation-direction: alternate-reverse;
+  }  
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #100101;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+/* The Close Button */
+  #close, #close2 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  #close:hover,
+  #close:focus,
+  #close2:hover,
+  #close2:focus {
+    color: rgb(90, 87, 87);
+    text-decoration: none;
+    cursor: pointer;
   }
 
   @keyframes startBtnGlowing {
@@ -126,10 +175,13 @@
     }
   }
 
-  #startBtn {
-    background-color: white;
-    border: .25vh solid orange;
-    border-radius: 4vh;
-    animation: startBtnGlowing 1700ms infinite;
-    animation-direction: alternate-reverse;
+  @keyframes animatetop {
+    from {
+        top: -300px; 
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
   }
