@@ -85,6 +85,8 @@ const $susCount = $('#susCount');
 const $battersBoxPage = $('#battersBoxPage');
 const $playAgainBoxBtn = $('#playAgainBoxBtn');
 const $quitBoxBtn = $('#quitBoxBtn');
+const $hitImg = $('#hitImg');
+const $missImg = $('#missImg');
 
 const $modal = $('#myModal');
 const $instructionsOpenBtn = $('#instructionsOpen');
@@ -146,7 +148,7 @@ function nextSwingSettings() {
 
     $hintMsg.html('');hintsGiven = [];hintPerSwing = 0;
 
-    $resultMsg.html('');
+    $resultMsg.html('');$hitImg.fadeOut();$missImg.fadeOut();
 }
 
 function defaultSettings() {
@@ -176,8 +178,6 @@ function getNextHint() {
         }
     } else {
         // Caught!
-        // Render thrown out page
-        // TODO: Change this to the real page
         $batterPage.fadeToggle();
         $battersBoxPage.fadeToggle();
         calculateResult(true);
@@ -296,13 +296,14 @@ function calculateResult(caught) {
         susCounter = 0;
         hintPerBat = 0;
         $resultMsg.html('HIT THE SHOWAAAAAAHHHHS!');
+        //TODO: fill image
     } else if ($pitcherCol.html() === $batterCol.html() && $pitcherRow.html() === $batterRow.html() && $pitcherSelected.html() === pitchBatterMatrix[$batterSelected.html()]) {
         // HIT! generate hit screen and update counters
         astrosHits++;
         pitchCount = 0;
         hintPerBat = 0;
         $resultMsg.html('HIT!!!');
-        // TODO: hit screen
+        $hitImg.fadeIn();
     } else if (pitchCount === pitchMax) { // check if pitcher threw 3 strikes
         // Astro Strikeout
         astrosStrikeouts++;
@@ -312,6 +313,7 @@ function calculateResult(caught) {
         // TODO: strikeout screen;
     }  else {
         $resultMsg.html('SWING BATTA BATTA BATTAAA...AND A MISS!');
+        $missImg.fadeIn();
     }
     renderCount();
 }
@@ -334,7 +336,7 @@ function renderCount() {
 $('document').ready(() => {
     $batterPage.fadeToggle();
     $pitcherPage.fadeToggle();
-    $battersBoxPage.fadeToggle();
+    $startPage.fadeToggle();
 })
 
 //#endregion

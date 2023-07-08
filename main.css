@@ -192,3 +192,12 @@
         opacity: 1
     }
   }
+
+  #hitImg,#missImg {
+    height: 40vh;
+    width: 40vh;
+  }
+
+  .flip-img {
+    transform: rotateY(180deg);
+  }
