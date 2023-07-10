@@ -1,4 +1,4 @@
-# Astros' Banging Baseball (https://leepdev.github.io/project-1/)
+# Astros' Banging Baseball
 
 The 2017 Houston Astros were caught using a tool (banging a garbage can) and someone in the dugout watching the signs on the other team to give 'hints' to the batter (https://en.wikipedia.org/wiki/Houston_Astros_sign_stealing_scandal).
 
@@ -22,7 +22,7 @@ TLDR: Bat like an Astro, and you'll be sure to be inside the mind of the opposin
 ## Tech Stacks
 Working with:
 - HTML
-- JS/JQuery
+- JQuery
 - CSS
 
 ## Wireframes
@@ -33,6 +33,31 @@ Working with:
 ![alt text](https://drive.google.com/uc?export=view&id=1srM7AZ7XiPPxUq-q4wnqlRhjTyhRrmsp)
 
 ![alt text](https://drive.google.com/uc?export=view&id=1AioqRV24DC-nl0hK0nsWV-2f3P6fVjA8)
+
+## Start Now
+    After hitting start (there's also an instruction button if you need more info!), you (player 1) will be faced with the pitching selection which you select the location using a grid and also the pitching speed.  Then the Astro (aka player 2) will be able to select where he/she would like to swing using a grid and also choose the swing speed.  The Astro will also have a hint button available, it will sound out and display the above logic in the form of (you guessed it!) Bangs!  The final screen will display 1 of 4 results:
+        -Hit!           Batter beats the pitcher!
+        -Miss!          Pitcher beats the batter!
+        -Strikeout!     Batter swings on 3 pitches and misses all of them!
+        -Thrownout!     Astros have used too many hints and have gotten their Astro thrown out of the game!
+
+    The base constants are:
+        -3 pitches max
+        -2 hints per swing
+        -5 hints per at bat
+        -7 hints before reaching the suspicion threshold
+
+    Every new at bat will reset the counters (except for suspicion.  That resets when an Astro is thrown out).
+
+    Click the link and have fun!
+
+    
+(https://leepdev.github.io/project-1/)
+
+![Imgur](https://i.imgur.com/wKqbv1P.png)
+![Imgur](https://i.imgur.com/pWiT9GU.png)
+![Imgur](https://i.imgur.com/5cCUABd.png)
+![Imgur](https://i.imgur.com/yn7scTx.png)
 
 ## MVP Goals
 - [X] Create a browser game setup
