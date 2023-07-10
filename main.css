@@ -30,7 +30,7 @@
     width: 30vh;
   }
 
-  #pitcherBody,#batterBody {
+  #pitcherBody,#batterBody,#battersBoxBody {
     display: flex;
     align-items: center;
   }
@@ -193,9 +193,23 @@
     }
   }
 
-  #hitImg,#missImg {
+  #hitImg {
     height: 40vh;
     width: 40vh;
+  }  
+  
+  #missImg,#thrownoutImg,#strikeoutImg {
+    height: 30vh;
+    width: 45vh;
+  }
+  
+  #strikeoutImgCrop {
+    display: flex;
+    overflow: hidden;
+    max-width: 35vh;
+    max-height: 18vh;
+    justify-content: center;
+    align-items: center;
   }
 
   .flip-img {

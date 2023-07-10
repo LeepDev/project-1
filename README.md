@@ -78,7 +78,7 @@ Working with:
 - [X] Render Astros batters Hit/Strikeout count
 - [X] Add info popup boxes for information on how to play the game
 - [X] audio clue of banging noises and pauses
-- [ ] Render pages
+- [X] Render pages
     - thrown out page
     - hit page
     - try again page
