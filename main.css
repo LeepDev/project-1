@@ -76,10 +76,6 @@
     color: red;
   }
 
-  #hintMsg {
-    color: green;
-  }
-
   #hint {
     width: 10vh;
     &:hover {
@@ -105,7 +101,7 @@
     margin-right: 10%;
   }
 
-  #startBtn,#pitcherBtn,#batterBtn,#playAgainBoxBtn,#quitBoxBtn,#instructionsOpen, #hintOpen {
+  #startBtn,#pitcherBtn,#batterBtn,#playAgainBoxBtn,#quitBoxBtn,#instructionsOpen,#hintOpen {
     width: auto;
     opacity: 60%;
     text-align: center;
@@ -118,6 +114,7 @@
     }
   }  
 
+  /* Animation for start button */
   #startBtn {
     background-color: white;
     border: .25vh solid orange;

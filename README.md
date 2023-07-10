@@ -1,4 +1,5 @@
-# Astros' Banging Baseball
+# Astros' Banging Baseball (https://leepdev.github.io/project-1/)
+
 The 2017 Houston Astros were caught using a tool (banging a garbage can) and someone in the dugout watching the signs on the other team to give 'hints' to the batter (https://en.wikipedia.org/wiki/Houston_Astros_sign_stealing_scandal).
 
 We're here to give you a peek into the batter's box of an Astro.
@@ -82,7 +83,7 @@ Working with:
     - thrown out page
     - hit page
     - try again page
-- [ ] clean up code to represent DRY methodology/compare with previous projects
+- [X] clean up code to represent DRY methodology/compare with previous projects
 
 
 ## Stretch Goals
@@ -112,5 +113,4 @@ Working with:
 ## Potential Roadblocks
 - Lack of knowledge of tech stack
 - Game Funkiness/wonky logic
-
 - CSS is fun...
