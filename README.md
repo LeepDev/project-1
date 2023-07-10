@@ -35,7 +35,11 @@ Working with:
 ![alt text](https://drive.google.com/uc?export=view&id=1AioqRV24DC-nl0hK0nsWV-2f3P6fVjA8)
 
 ## Start Now
-    After hitting start (there's also an instruction button if you need more info!), you (player 1) will be faced with the pitching selection which you select the location using a grid and also the pitching speed.  Then the Astro (aka player 2) will be able to select where he/she would like to swing using a grid and also choose the swing speed.  The Astro will also have a hint button available, it will sound out and display the above logic in the form of (you guessed it!) Bangs!  The final screen will display 1 of 4 results:
+        After hitting start (there's also an instruction button if you need more info!),
+    you (player 1) will be faced with the pitching selection which you select the location using a grid and also the pitching speed.
+    Then the Astro (aka player 2) will be able to select where he/she would like to swing using a grid and also choose the swing speed.
+    The Astro will also have a hint button available, it will sound out and display the above logic in the form of (you guessed it!) Bangs!
+    The final screen will display 1 of 4 results:
         -Hit!           Batter beats the pitcher!
         -Miss!          Pitcher beats the batter!
         -Strikeout!     Batter swings on 3 pitches and misses all of them!
